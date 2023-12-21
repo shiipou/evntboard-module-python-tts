@@ -1,0 +1,25 @@
+---
+builders:
+- image: python:3.12-alpine
+  workdir: /usr/src/app
+  adds:
+  - "requirements.txt"
+  script:
+  - pip install --no-cache-dir -r requirements.txt
+image: builder-0
+workdir: /usr/src/app
+adds:
+- "."
+root:
+  script:
+  - chown 1000:1000 -R ./
+script:
+- python -m compileall ./src
+entrypoint:
+- python
+cmd:
+- src/main.py
+ignores:
+- "**"
+- "!/src/"
+- "!/requirements.txt"

@@ -1,0 +1,5 @@
+asyncio==3.4.3
+websockets==12.0
+jsonrpcclient==4.0.3
+jsonrpcserver==5.0.9
+requests==2.31.0
