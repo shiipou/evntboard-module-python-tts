@@ -1,4 +1,4 @@
-# module-node-tts
+# module-python-tts
 
 To install dependencies:
 
